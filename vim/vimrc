@@ -46,8 +46,8 @@ syntax on
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-"set showcmd            " Show (partial) command in status line.
-"set showmatch          " Show matching brackets.
+set showcmd            " Show (partial) command in status line.
+set showmatch          " Show matching brackets.
 "set ignorecase         " Do case insensitive matching
 "set smartcase          " Do smart case matching
 "set incsearch          " Incremental search
@@ -62,3 +62,21 @@ endif
 
 " Relative line numbering
 set relativenumber
+
+"""""""""""""""""""""""""""
+" Status bar configuration
+"""""""""""""""""""""""""""
+" Clear status line when vimrc is reloaded
+set statusline=
+
+" Status line left side
+set statusline+=\ path:\ %F\ \|\ %M\ \|\ type:\ %Y\ \|\ %R
+
+" Divider to seperate left from right part
+set statusline+=%=
+
+" Status line right side
+set statusline+=\ ascii:\ %b\ row:\ %l\ col:\ %c\ percent:\ %p%%
+
+" Show the status on the second last line
+set laststatus=2
