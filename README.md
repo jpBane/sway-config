@@ -17,6 +17,11 @@ The following files go into `~/.config/sway/`:
 - `cpu_temp.sh`
 - `ram_usage_sh`
 
+You need to install a suitable font to make sure that the icons in the sway bar are displayed correctly:
+```bash
+sudo apt install fonts-font-awesome
+```
+
 ## vim
 Vim is searching for `.vimrc` in your home directory. Therefore the easiest way is to put it there: `~/.vimrc`. In case you perfer it where most other config files go (`~/.config/...`) you have several options. The simplest is to put `.vimrc` directly into your home directory and create a symbolic link inside `~/.config/...' unsing:
 
