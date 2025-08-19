@@ -16,6 +16,9 @@ The following files go into `~/.config/sway/`:
 - `status.sh`
 - `cpu_temp.sh`
 - `ram_usage_sh`
+- `cmus-info.sh`
+
+Do not forget to make the scripts excecutable by using `chmod +x`. 
 
 You need to install a suitable font to make sure that the icons in the sway bar are displayed correctly:
 ```bash
