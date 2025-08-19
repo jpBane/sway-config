@@ -28,10 +28,13 @@ ip_lan=$(ip -4 -o addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 # RAM
 ram_usage=$(~/.config/sway/ram_usage.sh)
 
-# Icons
-   
+# CMUS Player info
+cmus=$(~/.config/sway/cmus-info.sh)
 
-echo "v$linux_version |  $ssid ($ip_wlan) |  $ip_lan |  $cpu_temp | $ram_usage |  $date_formatted"
+# Icons
+    
+
+echo " $cmus || v$linux_version |  $ssid ($ip_wlan) |  $ip_lan |  $cpu_temp | $ram_usage |  $date_formatted"
 sleep 5 # absolut ausreichend für Informationen wie Temp, RAM, IP
 
 done
