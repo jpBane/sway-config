@@ -34,7 +34,7 @@ cmus=$(~/.config/sway/cmus-info.sh)
 # Icons
     
 
-echo " $cmus || v$linux_version |  $ssid ($ip_wlan) |  $ip_lan |  $cpu_temp | $ram_usage |  $date_formatted"
+echo "$cmus || v$linux_version |  $ssid ($ip_wlan) |  $ip_lan |  $cpu_temp | $ram_usage |  $date_formatted"
 sleep 5 # absolut ausreichend für Informationen wie Temp, RAM, IP
 
 done
