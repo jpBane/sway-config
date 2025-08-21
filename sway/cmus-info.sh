@@ -10,7 +10,7 @@ status=$(echo "$info" | grep '^status' | cut -d ' ' -f 2)
 
 # Only show if playing
 if [ "$status" = "playing" ]; then
-	echo "$artist - $title"
+	echo " $artist - $title"
 else
 	echo ""
 fi
