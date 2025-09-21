@@ -39,7 +39,11 @@ Copy the config file before you customise it:
 ```bash
 ranger --copy-config=rifle
 ```
-This copies the `rifle.conf`into `~/.config/ranger/`. 
+This copies the `rifle.conf`into `~/.config/ranger/`. Then modify the label editor in this file to make vim the standard text editor. 
+```
+# Change the original line to this one
+mime ^text, label editor = vim -- "$@" 
+```
 
 ## cmus
 
