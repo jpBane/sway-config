@@ -10,6 +10,7 @@ Overview of the files in this repository:
   - vim
   - ranger
   - cmus
+  - foot
 
 ## sway bar
 The following files go into `~/.config/sway/`:
@@ -34,7 +35,7 @@ ln -s ~/.config/vim/vimrc ~/.vimrc
 ```
 
 ## ranger
-Copy the config file before you customise ist:
+Copy the config file before you customise it:
 ```bash
 ranger --copy-config=rifle
 ```
@@ -43,3 +44,11 @@ This copies the `rifle.conf`into `¨/.config/ranger/`.
 ## cmus
 
 Copy all themes into `~/.config/cmus` and activate them by typing the following command inside cmus: `:colorscheme <name_of_theme>`. 
+
+## foot
+
+Create a subdirectory for the config file
+```bash
+mkdir ¨/.config/foot
+```
+Then copy the `foot.ini` from this repository into the new folder. The original config file is located in `/etc/xdg/foot/foot.ini`. 
