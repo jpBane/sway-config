@@ -39,7 +39,7 @@ Copy the config file before you customise it:
 ```bash
 ranger --copy-config=rifle
 ```
-This copies the `rifle.conf`into `¨/.config/ranger/`. 
+This copies the `rifle.conf`into `~/.config/ranger/`. 
 
 ## cmus
 
@@ -49,6 +49,6 @@ Copy all themes into `~/.config/cmus` and activate them by typing the following 
 
 Create a subdirectory for the config file
 ```bash
-mkdir ¨/.config/foot
+mkdir ~/.config/foot
 ```
 Then copy the `foot.ini` from this repository into the new folder. The original config file is located in `/etc/xdg/foot/foot.ini`. 
