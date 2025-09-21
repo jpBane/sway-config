@@ -45,6 +45,13 @@ This copies the `rifle.conf`into `~/.config/ranger/`.
 
 Copy all themes into `~/.config/cmus` and activate them by typing the following command inside cmus: `:colorscheme <name_of_theme>`. 
 
+In order to activate the automatic switch of the audio output, e.g. when you connect headphones, you need to edit the `pipewire-pulse.conf`. Copy the config file before you customise it for you current user:
+```bash
+mkdir ~/.config/pipewire
+cp /usr/share/pipewire/pipewire-pulse.conf ~/.config/pipewire/
+```
+Then uncomment the line `{ cmd = "load-module" args = "module-switch-on-connect" }`. 
+
 ## foot
 
 Create a subdirectory for the config file
