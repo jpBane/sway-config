@@ -9,6 +9,7 @@ Overview of the files in this repository:
 - config files some other tools
   - vim
   - ranger
+  - cmus
 
 ## sway bar
 The following files go into `~/.config/sway/`:
@@ -26,7 +27,7 @@ sudo apt install fonts-font-awesome
 ```
 
 ## vim
-Vim is searching for `.vimrc` in your home directory. Therefore the easiest way is to put it there: `~/.vimrc`. In case you perfer it where most other config files go (`~/.config/...`) you have several options. The simplest is to put `.vimrc` directly into your home directory and create a symbolic link inside `~/.config/...' unsing:
+Vim is searching for `.vimrc` in your home directory. Therefore the easiest way is to put it there: `~/.vimrc`. In case you perfer it where most other config files go (`~/.config/...`) you have several options. The simplest is to put `.vimrc` into `~/.vimrc/vim/` and create a symbolic link to `vimrc` inside your home folder using:
 
 ```bash
 ln -s ~/.config/vim/vimrc ~/.vimrc
@@ -37,4 +38,8 @@ Copy the config file before you customise ist:
 ```bash
 ranger --copy-config=rifle
 ```
-Where does the command put the file?
+This copies the `rifle.conf`into `¨/.config/ranger/`. 
+
+## cmus
+
+Copy all themes into `~/.config/cmus` and activate them by typing the following command inside cmus: `:colorscheme <name_of_theme>`. 
