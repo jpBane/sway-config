@@ -241,3 +241,5 @@ gaps inner 5
 # changed the default terminal font size in ~/.config/foot/foot.ini which was first copied from the original /etc/xdg/foot/foot.ini
 # When I did this the opacity setting for foot in this config has no effect any more. 
 
+# Screen Locker
+bindsym Mod4+l exec swaylock -c 000000 -k -l
