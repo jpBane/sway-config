@@ -243,7 +243,13 @@ gaps inner 5
 
 # Screen Locker
 bindsym Mod4+l exec swaylock -c 000000 -k -l
+bindsym Mod4+s exec swaylock -c 000000 -f && systemctl suspend
 
 # Deactivate the Laptop Display when the lid is closed and transfer all workspaces to the remaining displays
 bindswitch lid:on output eDP-1 disable
 bindswitch lid:off output eDP-1 enable
+
+# Media keys
+## Audio - pactl needs to be installed
+bindsym XF86AUdioLowerVolume exec "pactl set-sink-volume alsa_output.usb-Generic_Sound_Blaster_Play__4_WWSB1860431002357B-00.analog-stereo -5%"
+bindsym XF86AUdioRaiseVolume exec "pactl set-sink-volume alsa_output.usb-Generic_Sound_Blaster_Play__4_WWSB1860431002357B-00.analog-stereo +5%"
