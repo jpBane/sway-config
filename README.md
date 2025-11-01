@@ -13,7 +13,8 @@ Overview of the files in this repository:
   - cmus music player
   - foot terminal
 
-## sway bar
+## bar
+### sway bar
 The following files go into `~/.config/sway/`:
 - `sway/config`
 - `sway/status.sh`
@@ -27,6 +28,8 @@ You need to install a suitable font to make sure that the icons in the sway bar 
 ```bash
 sudo apt install fonts-font-awesome
 ```
+### waybar
+...
 
 ## wofi launcher
 
