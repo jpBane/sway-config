@@ -55,7 +55,7 @@ You can define if wofi uses run or drun by changing the parameter `mode=...` in 
 
 
 ## vim editor
-Vim is searching for `.vimrc` in your home directory. Therefore the easiest way is to put it there: `~/.vimrc`. In case you perfer it where most other config files go (`~/.config/...`) you have several options. The simplest is to put `.vimrc` into `~/.vimrc/vim/` and create a symbolic link to `vimrc` inside your home folder using:
+Vim is searching for `.vimrc` in your home directory. Therefore the easiest way is to put it there: `~/.vimrc`. In case you perfer it where most other config files go (`~/.config/...`) you have several options. The simplest is to put `vimrc` into `~/.config/vim/` and create a symbolic link to `.vimrc` inside your home folder using:
 
 ```bash
 ln -s ~/.config/vim/vimrc ~/.vimrc
