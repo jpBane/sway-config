@@ -204,8 +204,8 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+#bar {
+#    position top
 #    font pango:Font Awesome 5 Free
 
     # When the status_command prints a new line to stdout, swaybar updates.
@@ -213,12 +213,18 @@ bar {
 #    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
     status_command ~/.config/sway/status.sh
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#    }
+#}
+
+# in order to have waybar work when switching window managers
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec xdg-desktop-portal-wlr
+# start waybar
+exec waybar
 
 include /etc/sway/config.d/*
 
@@ -242,8 +248,8 @@ gaps inner 5
 # When I did this the opacity setting for foot in this config has no effect any more. 
 
 # Screen Locker
-bindsym Mod4+l exec swaylock -c 000000 -k -l
-bindsym Mod4+s exec swaylock -c 000000 -f && systemctl suspend
+bindsym Mod4+l exec swaylock --image /home/jpbane/Bilder/lockscreen.png
+bindsym Mod4+s exec swaylock --image /home/jpbane/Bilder/lockscreen.png -f && systemctl suspend
 
 # Deactivate the Laptop Display when the lid is closed and transfer all workspaces to the remaining displays
 bindswitch lid:on output eDP-1 disable
@@ -253,3 +259,11 @@ bindswitch lid:off output eDP-1 enable
 ## Audio - pactl needs to be installed
 bindsym XF86AUdioLowerVolume exec "pactl set-sink-volume alsa_output.usb-Generic_Sound_Blaster_Play__4_WWSB1860431002357B-00.analog-stereo -5%"
 bindsym XF86AUdioRaiseVolume exec "pactl set-sink-volume alsa_output.usb-Generic_Sound_Blaster_Play__4_WWSB1860431002357B-00.analog-stereo +5%"
+
+## Screenshot
+bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png
+
+## install brightnessctl first
+bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
+bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
+# does not work. debug with wev
