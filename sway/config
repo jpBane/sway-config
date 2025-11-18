@@ -253,8 +253,9 @@ bindsym Mod4+l exec swaylock --image /home/jpbane/Bilder/lockscreen.png
 bindsym Mod4+s exec swaylock --image /home/jpbane/Bilder/lockscreen.png -f && systemctl suspend
 
 # Deactivate the Laptop Display when the lid is closed and transfer all workspaces to the remaining displays
-bindswitch lid:on output eDP-1 disable
-bindswitch lid:off output eDP-1 enable
+# UPDATE: uncomment "HandleLidSwitch=suspend" in `/etc/systemd/logind.conf` instead
+#bindswitch lid:on output eDP-1 disable
+#bindswitch lid:off output eDP-1 enable
 
 # Media keys
 ## Audio - pactl needs to be installed
