@@ -31,7 +31,13 @@ sudo apt install fonts-font-awesome
 ### waybar
 ...
 
-## wofi launcher
+## launcher
+
+In case you want to go with a minimalistic launcher like `dmenu` that you may know from i3 already, you need to install `suckless-tools`. 
+
+```
+sudo apt install suckless-tools
+```
 
 If you prefer a more visually appealing alternative to the lightweight `dmenu`: 
 
