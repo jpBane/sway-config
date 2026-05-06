@@ -261,8 +261,8 @@ bindsym Mod4+s exec swaylock --image /home/jpbane/Bilder/lockscreen.png -f && sy
 
 # Media keys
 ## Audio - pactl needs to be installed
-bindsym XF86AUdioLowerVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5%"
-bindsym XF86AUdioRaiseVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +5%"
+bindsym XF86AUdioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AUdioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 
 ## Screenshot
 bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png
